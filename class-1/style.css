@@ -1,0 +1,91 @@
+/*=================================
+My Custom CSS
+=============
+
+Author: Mohammad Saifur Rahman
+Updated: 20 May, 2018
+Notes: Hand Coded for RR Foundation
+
+===================================*/
+
+
+
+.flip_box_area {
+  background: #EFEFEF;
+  padding: 70px 0;
+}
+.single_flip_box {
+	text-align: center;
+	background: #fff;
+	padding: 30px;
+	border-bottom: 4px solid #000000;
+	height: 100%;
+	display: table;
+	width: 100%;
+}
+.back .single_flip_box {
+    background-color: #282828;
+    color: #fff;
+}
+.single_flip_box i.fa {
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+.single_flip_box h3 {
+  text-transform: capitalize;
+  font-weight: 400;
+}
+.flip_box_tcell {
+	display: table-cell;
+	vertical-align: middle;
+}
+.flip_box {
+	margin: 0 auto 80px;;
+	height: 350px;  
+	position: relative;
+	-webkit-perspective: 800px;
+	-moz-perspective: 800px;
+}
+.flip_box .front,
+.flip_box .back {
+	width: 100%;
+}
+.flip_box .front {
+	height: inherit;
+	position: absolute;
+	top: 0;
+	z-index: 900;
+	text-align: center;
+	-webkit-transform: rotateX(0deg) rotateY(0deg);
+	   -moz-transform: rotateX(0deg) rotateY(0deg);
+	-webkit-transform-style: preserve-3d;
+	   -moz-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	   -moz-backface-visibility: hidden;
+	-webkit-transition: all .9s ease-in-out;
+			transition: all .9s ease-in-out;
+}
+.flip_box .back {
+	height: inherit;
+	position: absolute;
+	top: 0;
+	z-index: 1000;
+	-webkit-transform: rotateY(180deg);
+	   -moz-transform: rotateY(180deg);
+	-webkit-transform-style: preserve-3d;
+	   -moz-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	   -moz-backface-visibility: hidden;
+	-webkit-transition: all .9s ease-in-out;
+			transition: all .9s ease-in-out;
+}
+.flip_box.flip .front {
+	z-index: 900;
+	-webkit-transform: rotateY(-180deg);
+	-moz-transform: rotateY(-180deg);
+}
+.flip_box.flip .back {
+	z-index: 1000;
+	-webkit-transform: rotateX(0deg) rotateY(0deg);
+	-moz-transform: rotateX(0deg) rotateY(0deg);
+}
